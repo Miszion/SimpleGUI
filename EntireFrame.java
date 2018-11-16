@@ -1,4 +1,4 @@
-mport javax.swing.*;
+import javax.swing.*;
 
 //code written by Mission Marcus 
 public class EntireFrame{
