@@ -18,8 +18,8 @@ public class WholeFrame extends JPanel{
 	 */
 	private static final long serialVersionUID = 1L; // recommended add in. 
 	
-	private String bb = "Hello Best Buy!";
-	private String myName = "My name is Mission. \n\n\nAttached is my LinkedIn!";
+	private String bb = "Hello Employer!!";
+	private String myName = "My name is Mission. \n\n\nAttached is my GitHub!";
 	private Timer time;
 	private int currentIndex;
 	public JTextArea Firstpane;
@@ -33,9 +33,9 @@ public class WholeFrame extends JPanel{
 		Firstpane = new JTextArea();
 		Firstpane.setEditable(false);
 		Firstpane.setForeground(Color.yellow);
-		Firstpane.setBackground(Color.BLUE);
+		Firstpane.setBackground(Color.BLACK);
 		Firstpane.setFont(font);
-		this.setBackground(Color.BLUE);
+		//this.setBackground(Color.BLUE);
 
 		
 		time = new Timer(100, new timeListener());
@@ -98,4 +98,42 @@ public class WholeFrame extends JPanel{
 		}
 		
 	}
+	
+	private class ButtonListener implements ActionListener
+	{
+		
+		public void actionPerformed(ActionEvent e)
+		{
+			Desktop des = Desktop.getDesktop();
+			
+			try
+			{
+			URI url = new URI("http://github.com/Miszion");
+			
+			try
+			{
+				des.browse(url);
+			}
+			catch(IOException ex)
+			{
+				
+			}
+			
+			
+			
+			
+			}
+			catch(URISyntaxException err)
+			{
+				System.out.println("Browser couldnt be opened");
+			}
+
+			
+			
+		}
+		
+		
+	}
+	
+	
 }
